@@ -1,16 +1,23 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import service.ProjectService;
 
 @Controller
 public class ProjectController {
 
+	private ProjectService service;
 	
-	@RequestMapping("")
-	public String login() {
-		return "";
+	public void setService(ProjectService service) {
+		this.service = service;
 	}
+	
+	public ProjectController() {
+		
+	}
+
+	
 
 }// end class
 
