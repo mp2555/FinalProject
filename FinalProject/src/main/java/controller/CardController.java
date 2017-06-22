@@ -19,6 +19,8 @@ public class CardController {
 
 //연습 은비바보
 		//연습.은비
+		
+		//야호야호야호
 
 	}
 
