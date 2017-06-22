@@ -1,6 +1,8 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import service.ProjectService;
 
@@ -16,7 +18,21 @@ public class ProjectController {
 	public ProjectController() {
 		
 	}
-
+	
+	@RequestMapping("/information.do")
+	public ModelAndView testMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("information");
+		return mav;
+	}
+	
+	@RequestMapping("/dashboard.do")
+	public ModelAndView boardMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("dashboard");
+		return mav;
+	}
+	
 	
 
 }// end class
