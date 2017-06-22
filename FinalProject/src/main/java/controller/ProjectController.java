@@ -18,7 +18,7 @@ public class ProjectController {
 	public ProjectController() {
 		
 	}
-	
+	/////////
 	@RequestMapping("/information.do")
 	public ModelAndView testMethod(){
 		ModelAndView mav = new ModelAndView();
