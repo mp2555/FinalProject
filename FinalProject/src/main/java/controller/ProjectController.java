@@ -47,6 +47,19 @@ public class ProjectController {
 		return mav;
 	}
 	
+	@RequestMapping("/login.do")
+	public ModelAndView loginMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("loginpage");
+		return mav;
+	}
+	
+	@RequestMapping("/join.do")
+	public ModelAndView joinMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("joinpage");
+		return mav;
+	}
 
 }// end class
 
