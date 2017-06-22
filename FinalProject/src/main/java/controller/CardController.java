@@ -16,6 +16,8 @@ public class CardController {
 
 	public CardController() {
 		// TODO Auto-generated constructor stub
+		
+		//연습
 	}
 
 }// end class
