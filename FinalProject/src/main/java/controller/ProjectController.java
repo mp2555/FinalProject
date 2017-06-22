@@ -33,14 +33,6 @@ public class ProjectController {
 		return mav;
 	}
 	
-	@RequestMapping("/project.do")
-	public ModelAndView projectMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("project");
-		return mav;
-	}
-	
-	
 	
 
 }// end class
