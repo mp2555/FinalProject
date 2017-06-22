@@ -21,7 +21,9 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations">
 			<list>
-				<value>classpath*:config/mapper.xml</value>							
+				<value>classpath*:config/Member_mapper.xml</value>
+				<value>classpath*:config/Project_mapper.xml</value>
+				<value>classpath*:config/Card_mapper.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -46,16 +48,43 @@
 
 	<!-- [6] 트랜잭션 설정 -->
 	<aop:config>
-		<aop:advisor advice-ref="txAdvice"
-			pointcut="execution(* service.Board*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* service.*.*(..))" />
 	</aop:config>
 
 	<!-- [7] DAO 빈 선언 -->
+	<bean id="dao_Member" class="dao.MebmerDAOImp">
+		<property name="sqlSession" ref="sqlSession" />
+	</bean>
+	<bean id="dao_Project" class="dao.ProjectDAOImp">
+		<property name="sqlSession" ref="sqlSession" />
+	</bean>
+	<bean id="dao_Card" class="dao.CardDAOImp">
+		<property name="sqlSession" ref="sqlSession" />
+	</bean>
 
 	<!-- [8] Service 빈 선언 -->
+	<bean id="service_Member" class="service.MemberServiceImp">
+		<property name="dao" ref="dao_Member" />
+	</bean>
+	<bean id="service_Project" class="service.ProjectServiceImp">
+		<property name="dao" ref="dao_Project" />
+	</bean>
+	<bean id="service_Card" class="service.CardServiceImp">
+		<property name="dao" ref="dao_Card" />
+	</bean>
 
 
 	<!-- [9] Controller 빈 선언 -->
+	<bean class="controller.MemberController">
+		<property name="service" ref="service_Member" />
+	</bean>
+	<bean class="controller.ProjectController">
+		<property name="service" ref="service_Project" />
+	</bean>
+	<bean class="controller.CardController">
+		<property name="service" ref="service_Card" />
+	</bean>
+
 
 
 	<!--첨부파일의 임시기억장치 경로 설정 -->
@@ -78,7 +107,7 @@
 	</bean>
 
 	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver"><!--우선순위를 나중에 사용해야함 -->
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/agileView/" />
 		<property name="suffix" value=".jsp" />
 		<property name="order" value="2" />
