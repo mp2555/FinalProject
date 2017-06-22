@@ -36,7 +36,7 @@
 			<li>|</li>
 			<li><a href="#" id="WIKI">WIKI</a></li>
 			<li>|</li>
-			<li><a href="#" id="CALENDER">CALENDER</a></li>
+			<li><a href="#" id="CALENDER">CALENDAR</a></li>
 			<li>|</li>
 			<li><a href="#" id="MEMBER MANAGEMENT">MEMBER MANAGEMENT</a></li>
 			<li>|</li>

@@ -70,22 +70,13 @@ html {
 }
 
 h1 {
+	margin-left:10px;
 	font-size: 1.777em;
 	line-height: 1.2em;
-	margin-top: 1.6em
+	margin-top: 3.5em;
+	margin-bottom:1em;
 }
 
-h2 {
-	font-size: 1.422em;
-	line-height: 1.2em;
-	margin-top: 1.6em
-}
-
-h3, h4, h5, h6 {
-	font-size: 1em;
-	line-height: 1.2em;
-	margin-top: 1.6em
-}
 
 a {
 	color: #5e98ba
@@ -181,7 +172,7 @@ input[type="button"]:focus, input[type="submit"]:focus {
 	color: #fff
 }
 
-footer {
+/* footer {
 	font-size: .8em;
 	margin: 4em 1em;
 	text-align: center
@@ -200,7 +191,7 @@ footer li {
 
 footer p {
 	margin: .5em 0
-}
+} */
 
 .inline-image {
 	display: inline-block;
@@ -248,7 +239,6 @@ footer p {
 	}
 }
 
-@media only screen and (min-width:900px) {
 	html {
 		font-size: 20px
 	}
@@ -273,49 +263,7 @@ footer p {
 		margin: 0 auto;
 		position: relative
 	}
-	.layout-twothirds-left {
-		max-width: 585px
-	}
-	.layout-twothirds-right {
-		margin-left: 315px;
-		width: 585px
-	}
-	.display-show-large {
-		display: inline-block
-	}
-	.layout-callout-far-right, .layout-callout-far-left,
-		.layout-callout-right, .layout-callout-left {
-		position: absolute;
-		top: -3em
-	}
-	.layout-callout-right {
-		left: 640px
-	}
-	.layout-callout-left {
-		right: 640px
-	}
-	.layout-callout-up3 {
-		top: -6em
-	}
-	.layout-callout-up2 {
-		top: -5em
-	}
-	.layout-callout-up1 {
-		top: -4em
-	}
-	.layout-callout-down1 {
-		top: -2em
-	}
-	.layout-callout-down2 {
-		top: -1em
-	}
-	.layout-callout-down3 {
-		top: 0
-	}
-	.layout-section-tall {
-		padding: 6em 1em
-	}
-}
+	
 
 #email-error, #pass-error ,#name-error{
 	margin-bottom: .6em;
@@ -406,7 +354,7 @@ $(document).ready(function(){
 		<div id="signup-form" class="layout-twothirds-center">
 
 			<div id="signup-password">
-				<h1>Welcome to Love your project </h1>
+				<h1>LOVE YOUR PROJECT </h1>
 				<label for="email">Email</label> 
 				<div id="email-error" class="hidden error-message"></div>
 				
@@ -420,15 +368,15 @@ $(document).ready(function(){
 					name="password" id="password" tabindex="0" placeholder="비밀번호">
 					
 					 <input id="login"
-					tabindex="0" type="button" class="button button-green" value="로그인">
+					tabindex="0" type="button" class="button button-green" value="LOGIN">
 					<input id="join"
-					tabindex="0" type="button" class="button button-green" value="회원가입">
+					tabindex="0" type="button" class="button button-green" value="SIGN UP">
 			</div>
 			<br>
 		</div>
 	</div>
 
-	<footer class="quiet" data-track-group="Footer">
+	<!-- <footer class="quiet" data-track-group="Footer">
 		<ul>
 			<li><a href="/tour">Tour</a></li>
 			<li><a href="/pricing">Pricing</a></li>
@@ -441,6 +389,6 @@ $(document).ready(function(){
 			<li><a href="/legal">Legal</a></li>
 		</ul>
 		<p>© Copyright 2017, Trello, Inc. All rights reserved.</p>
-	</footer>
+	</footer> -->
 </body>
 </html>
