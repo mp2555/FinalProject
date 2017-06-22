@@ -40,6 +40,14 @@ public class ProjectController {
 		return mav;
 	}
 	
+	@RequestMapping("/calendar.do")
+	public ModelAndView calendarMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("calendar");
+		return mav;
+	}
+	
+	
 	
 	
 
