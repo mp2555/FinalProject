@@ -11,21 +11,34 @@
 
 </head>
 <body>
-
 	<div id="all">
-		<nav id="topMenu">
-			<ul class="menu">
-				<li><a href="#" id="HOME"></a></li>
-				<li style="color: #2d2d2d">김동호 바보바보바보바보바보바보김동호 바보바보바보김동호
-					바보바보바보바보바보바보김동호 바보바보바보바보김동호 바보바보바보김동호 바보바보바보</li>
-				<li><a href="#" id="PROJECT INFORMATION"></a></li>
-			</ul>
-		</nav>
 
+		<div id="horizontal-menu">
+			<ul class="navbar">
+				<li id="home"><a href="#" id="home"><img id="home"
+						src="images/home.png" width="45" height="30" /></a></li>
+				<li id="logo1">Love Your Project</li>
+				<li><a href="#" id="profile">PROFILE</a></li>
+			</ul>
+
+		</div>
+
+
+
+		<div id="topMenu">
+			<ul class="menu">
+				<li><a href="#" id="TIME LINE">TIME LINE</a></li>
+				<li style="color: #2d2d2d">김동호 바보바보바보바보바보바보김동호 바보바보바보김동호 바보바보
+					바보김동호 바보 ...</li>
+				<li><a href="#" id="PROJECT INFORMATION">PROJECT
+						INFORMATION</a></li>
+			</ul>
+		</div>
 		<div class="main-Kanban1">
 			<div class="main-Kanban2">
 				<h1>
-					<span class="project-name">프로젝트 대시보드</span>
+					<span class="project-name">KH 파이널</span> <span class="project-name">프로젝트
+						대시보드</span>
 				</h1>
 			</div>
 
@@ -39,17 +52,18 @@
 			<div id="table-inner"></div>
 		</div>
 
-	</div>
+	
 
 	<div>
 		<div id="main">
-			<span class="topmain"> WORKING ON </span>
+			<span class="topmain" style="font-family:" TrebuchetMS", Dotum; ">
+				WORKING ON </span>
 		</div>
 
 		<div id="one">
 			<img alt="1" src="images/profile.png">
 			<ul>
-				<li><span>KH파이널(프로젝트이름)</span></li>
+				<li><span style="font-weight: bold; font-family:" TrebuchetMS", Dotum;">KH파이널(프로젝트이름)</span></li>
 				<li><span>#칸반이름</span>
 			</ul>
 			<hr />
@@ -58,7 +72,7 @@
 		<div id="two">
 			<img alt="1" src="images/profile.png">
 			<ul>
-				<li><span>KH파이널(프로젝트이름)</span></li>
+				<li><span style="font-weight: bold;">KH파이널(프로젝트이름)</span></li>
 				<li><span>#칸반이름</span>
 			</ul>
 
@@ -68,7 +82,7 @@
 		<div id="three">
 			<img alt="1" src="images/profile.png">
 			<ul>
-				<li><span>KH파이널(프로젝트이름)</span></li>
+				<li><span style="font-weight: bold;">KH파이널(프로젝트이름)</span></li>
 				<li><span>#칸반이름</span>
 			</ul>
 		</div>
@@ -81,7 +95,7 @@
 		<div id="first">
 			<img alt="1" src="images/profile.png">
 			<ul>
-				<li><span>KH파이널(프로젝트이름)</span></li>
+				<li><span style="font-weight: bold;">KH파이널(프로젝트이름)</span></li>
 				<li><span>#칸반이름</span>
 			</ul>
 			<hr />
@@ -90,7 +104,7 @@
 		<div id="second">
 			<img alt="1" src="images/profile.png">
 			<ul>
-				<li><span>KH파이널(프로젝트이름)</span></li>
+				<li><span style="font-weight: bold;">KH파이널(프로젝트이름)</span></li>
 				<li><span>#칸반이름</span>
 			</ul>
 
@@ -100,21 +114,21 @@
 		<div id="third">
 			<img alt="1" src="images/profile.png">
 			<ul>
-				<li><span>KH파이널(프로젝트이름)</span></li>
+				<li><span style="font-weight: bold;">KH파이널(프로젝트이름)</span></li>
 				<li><span>#칸반이름</span>
 			</ul>
 		</div>
-		
+
 		<div id="manage">
 			<span class="topreading"> PROJECT</span>
 		</div>
 
 		<div id="project">
 			<ul>
-			    <li><img alt="사진" src="images/profile.png">
-			    <li> FINAL PROJECT</li>
-			    <li> 프로젝트 설명 </li>
-				<li><input  type="submit" value="수락" class="ok">
+				<li><img alt="사진" src="images/profile.png">
+				<li>FINAL PROJECT</li>
+				<li>프로젝트 설명</li>
+				<li><input type="submit" value="수락" class="ok">
 				<li><input type="reset" value="거절" class="no">
 			</ul>
 		</div>
@@ -126,7 +140,7 @@
 
 
 
-
+</div>
 
 
 
