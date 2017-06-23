@@ -19,17 +19,18 @@ public class ProjectController {
 		
 	}
 	
-	@RequestMapping("/information.do")
-	public ModelAndView testMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("information");
-		return mav;
-	}
 	
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("dashboard");
+		return mav;
+	}
+	
+	@RequestMapping("/project_member.do")
+	public ModelAndView memberMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("project_member");
 		return mav;
 	}
 	
@@ -47,19 +48,9 @@ public class ProjectController {
 		return mav;
 	}
 	
-	@RequestMapping("/login.do")
-	public ModelAndView loginMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("loginpage");
-		return mav;
-	}
 	
-	@RequestMapping("/join.do")
-	public ModelAndView joinMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("joinpage");
-		return mav;
-	}
+	
+	
 
 }// end class
 

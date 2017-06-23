@@ -116,7 +116,7 @@ textarea, input[type="text"], input[type="email"], input[type="password"],
 	border: 1px solid #cdd2d4;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: .5em;
+	padding: .4em;
 	max-width: 400px;
 	width: 100%
 }
@@ -158,18 +158,24 @@ input[type="button"]:focus, input[type="submit"]:focus {
 	display: inline-block;
 	font-weight: bold;
 	margin-bottom: .8em;
-	padding: .6em 1.3em;
+	padding: .5em 1.3em;
 	position: relative;
 	text-decoration: none;
-	border: 0
+	border: 0;
+	width:198px;
 }
 
 .button-green {
-	background: #5f206f;
+   /*진한 background: #963737;  
+  	 진한 box-shadow: 0 4px 0 #662222; */
+	background: #c15757;
+	box-shadow: 0 4px 0 #a53d3d;   
+	/*  background: #5f206f;
 	background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
-	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
-	box-shadow: 0 4px 0 #3f6f21;
+	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%); 
+	box-shadow: 0 4px 0 #3f6f21;  */
 	color: #fff
+
 }
 
 /* footer {
@@ -367,10 +373,11 @@ $(document).ready(function(){
 				</div><input type="password"
 					name="password" id="password" tabindex="0" placeholder="비밀번호">
 					
+					<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 					 <input id="login"
 					tabindex="0" type="button" class="button button-green" value="LOGIN">
 					<input id="join"
-					tabindex="0" type="button" class="button button-green" value="SIGN UP">
+					tabindex="0" type="button" class="button button-green" value="JOIN">
 			</div>
 			<br>
 		</div>
