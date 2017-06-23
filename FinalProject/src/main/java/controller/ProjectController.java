@@ -18,18 +18,14 @@ public class ProjectController {
 	public ProjectController() {
 		
 	}
-<<<<<<< HEAD
-	/////////
+
 	@RequestMapping("/information.do")
 	public ModelAndView testMethod(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("information");
 		return mav;
 	}
-=======
-	
->>>>>>> refs/remotes/origin/master
-	
+
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod(){
 		ModelAndView mav = new ModelAndView();
