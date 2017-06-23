@@ -164,10 +164,12 @@ input[type="button"]:focus, input[type="submit"]:focus {
 }
 
 .button-green {
-	background: #5f206f;
+	background: #c15757;  
+	box-shadow: 0 4px 0 #a53d3d; 
+	/*  background: #5f206f;
 	background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
-	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
-	box-shadow: 0 4px 0 #3f6f21;
+	background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%); 
+	box-shadow: 0 4px 0 #3f6f21;  */
 	color: #fff
 }
 
