@@ -33,6 +33,13 @@ public class ProjectController {
 		return mav;
 	}
 	
+	@RequestMapping("/member.do")
+	public ModelAndView memberMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("member");
+		return mav;
+	}
+	
 	@RequestMapping("/calendar.do")
 	public ModelAndView calendarMethod(){
 		ModelAndView mav = new ModelAndView();
