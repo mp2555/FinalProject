@@ -19,12 +19,6 @@ public class ProjectController {
 		
 	}
 
-	@RequestMapping("/information.do")
-	public ModelAndView testMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("information");
-		return mav;
-	}
 
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod(){
