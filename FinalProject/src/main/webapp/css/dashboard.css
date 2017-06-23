@@ -305,6 +305,7 @@ text-decoration: none;
 	border-radius: .25em;
 	box-shadow: ;
 	margin-right: 15px;
+    cursor: pointer; 
 }
 
 

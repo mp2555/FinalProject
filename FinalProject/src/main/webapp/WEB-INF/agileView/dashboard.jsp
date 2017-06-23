@@ -128,8 +128,8 @@
 				<li><img alt="사진" src="images/profile.png">
 				<li>FINAL PROJECT</li>
 				<li>프로젝트 설명</li>
-				<li><input type="submit" value="수락" class="ok">
-				<li><input type="reset" value="거절" class="no">
+				<li><input type="submit" value="수락" class="ok"/></li>
+				<li><input type="reset" value="거절" class="no"/></li>
 			</ul>
 		</div>
 

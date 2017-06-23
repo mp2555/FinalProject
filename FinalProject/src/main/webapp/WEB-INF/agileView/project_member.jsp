@@ -6,14 +6,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<link rel="stylesheet" type="text/css" href="css/member.css" />
+<link rel="stylesheet" type="text/css" href="css/project_member.css" />
 <link rel="stylesheet" href="/v-1495533137927/styles/theme-taiga.css">
 </head>
 <body>
 
-<jsp:include page="header.jsp"></jsp:include> 
+
 
 <div id="all">
+
+<jsp:include page="header.jsp"></jsp:include> 
 
 		<div class="main-Kanban1">
 			<h1>
