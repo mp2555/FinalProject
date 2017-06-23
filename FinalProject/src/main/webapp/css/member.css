@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+
+#all{
+   position: absolute;
+   width: 1500px;
+}
+
+#topMenu {
+   width: 100%;
+   margin: 0;
+   padding: 30px 0 30px 0;
+   position: absolute;
+}
+
+#topMenu .menu {
+   list-style-type: none;
+   margin: 0 auto;
+   padding: 0 auto;
+}
+
+#topMenu .menu li {
+   color: white;
+   background-color: #2d2d2d;
+   float: left;
+   position: absoulte;
+   line-height: 30px;
+   vertical-align: middle;
+   text-align: center;
+   padding: 0px 2px 0px 2px;
+   margin: 0 auto;
+}
+
+#topMenu .menu li:first-child {
+   border-left: none;
+}
+
+.menu a {
+   text-decoration: none;
+   width: 150px;
+   display: block;
+   font-size: 12px;
+   font-weight: bold;
+   font-family: "Trebuchet MS", Dotum;
+   color: white;
+}
+
+a:hover {
+   border-bottom: 3px solid red;
+}
+/* -----------------------------------*/
+
+.main-Kanban1{
+   margin : 3px;
+   padding : 60px 0 0 133px;
+}
+
+.main-Kanban2{
+	
+}
+
+////////////////////////////////////////////////
+
+#member{
+	width: 1500px;
+	
+}
+
+#mem_search{
+	position : absolute;
+	margin-top: 100px;
+	margin-left: 870px;
+}
+
+#search{
+	border: 1px solid #2d2d2d;
+	height: 23px;
+	}
+
+#search_btn{
+	background-color:  #2d2d2d;
+	color: white;
+	border : none;
+	width: 75px;
+	height: 27px;
+}
+
+#one{
+	position: absolute;
+    width:300px;
+    height:100px;
+    margin-left: 140px;
+    margin-top: 235px;
+}
+
+#one img{
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+#one ul li{
+	list-style-type: none;
+	margin-left: 10px;
+	
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2d2d2d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2d2d2d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+ 
+
