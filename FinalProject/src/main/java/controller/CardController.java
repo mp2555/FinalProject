@@ -15,13 +15,8 @@ public class CardController {
 	}
 
 	public CardController() {
-		System.out.println("d");
-		// TODO Auto-generated constructor stub
-
-//연습 은비바보
-		//연습.은비
 		
-		//야호야호야호ㅇㅇㅇㅇㅇㅇ
+		// TODO Auto-generated constructor stub
 
 	}
 
