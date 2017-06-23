@@ -115,7 +115,7 @@ textarea, input[type="text"], input[type="email"], input[type="password"],
 	border: 1px solid #cdd2d4;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: .5em;
+	padding: .4em;
 	max-width: 400px;
 	width: 100%
 }
@@ -140,7 +140,7 @@ textarea.error, input[type="text"].error, input[type="email"].error,
 
 textarea.error:focus, input[type="text"].error:focus, input[type="email"].error:focus,
 	input[type="password"].error:focus, input[type="number"].error:focus {
-	box-shadow: 0 0 6px #ec9488
+	box-shadow: 0 0 4px #ec9488
 }
 
 input[type="button"]:focus, input[type="submit"]:focus {
@@ -157,10 +157,11 @@ input[type="button"]:focus, input[type="submit"]:focus {
 	display: inline-block;
 	font-weight: bold;
 	margin-bottom: .8em;
-	padding: .6em 1.3em;
+	padding: .5em 1.3em;
 	position: relative;
 	text-decoration: none;
-	border: 0
+	border: 0;
+	width:400px;
 }
 
 .button-green {
