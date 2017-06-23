@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import service.CardService;
 
 @Controller
-public class CardController {
+public class CalendarController {
 
 	private CardService service;
 
@@ -14,7 +14,7 @@ public class CardController {
 		this.service = service;
 	}
 
-	public CardController() {
+	public CalendarController() {
 		
 		// TODO Auto-generated constructor stub
 

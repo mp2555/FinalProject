@@ -1,14 +1,58 @@
 @CHARSET "UTF-8";
-
 #all{
-   position: absolute;
+   position: relative;
    width: 1500px;
+   height:100%;
+   margin-left: 350px;
 }
 
+ 
+
+ #horizontal-menu .navbar {
+   list-style-type: none;
+   
+}
+ 
+#home{
+		position:absolute;
+		top:6px;
+		left:20px;
+}
+
+#profile{
+	position:absolute;
+	top:25px;
+	width:50px;
+	left:900px;
+}
+
+#logo1{
+	position:absolute;
+	top:13px;
+	width:300px;
+	left:420px;
+	font-family:Fantasy;
+	font-size: 30px;
+	color: #8d8d8d;
+}
+
+
+ #horizontal-menu .navbar li:first-child{
+border-left: none;
+} 
+
+ .navbar a {
+text-decoration: none;
+   width: 50px;
+   display: block;
+   font-size: 18px;
+   font-family: "Trebuchet MS", Dotum;
+   color: #8d8d8d;
+}
+ 
 #topMenu {
-   width: 100%;
-   margin: 0;
-   padding: 30px 0 30px 0;
+   width:100%;
+  top:55px;
    position: absolute;
 }
 
@@ -34,6 +78,10 @@
    border-left: none;
 }
 
+.menu a:hover {
+   border-bottom: 3px solid red;
+}
+
 .menu a {
    text-decoration: none;
    width: 150px;
@@ -42,19 +90,14 @@
    font-weight: bold;
    font-family: "Trebuchet MS", Dotum;
    color: white;
+   
 }
-
-a:hover {
-   border-bottom: 3px solid red;
-}
-/* -----------------------------------*/
 
 .main-Kanban1{
-   margin : 3px;
-   padding : 60px 0 0 133px;
-}
-
-.main-Kanban2{
+	position:absolute;
+	width:100%;
+	top:100px;
+	left:100px;
 	
 }
 
@@ -65,29 +108,30 @@ a:hover {
 
 #main{
 	position: absolute;
-	width: 300px;
+	width: 250px;
 	height: 40px;
 	border:none;
 	font-size: 25px;
 	color: white;
 	background-color: #2d2d2d; 
 	 text-align: center;
-	 margin-top: 180px;
-	 margin-left: 140px;
+	 margin-top: 200px;
+	 margin-left: 120px;
 	 border-radius: .25em;
+	 
 }
 
 #reading{
 	position: absolute;
-	width: 300px;
+	width: 250px;
 	height: 40px;
 	border:none;
 	font-size: 25px;
 	color: white;
 	background-color: #2d2d2d; 
 	 text-align: center;
-	 margin-top: 180px;
-	 margin-left: 490px;
+	 margin-top: 200px;
+	 margin-left: 420px;
 	 border-radius: .25em;
 }
 
@@ -98,49 +142,55 @@ a:hover {
 
 #one{
 	position: absolute;
-    width:300px;
+    width:250px;
     height:100px;
-    margin-left: 140px;
-    margin-top: 235px;
+    margin-left: 120px;
+    margin-top: 260px;
+    font-family: "Trebuchet MS", Dotum;  
 }
 
 #two{
 	position: absolute;
-    width:300px;
+    width:250px;
     height:100px;
-    margin-left: 140px;
-    margin-top: 315px;
+    margin-left: 120px;
+    margin-top: 330px;
+    font-family: "Trebuchet MS", Dotum; 
 }
 
 #three{
 	position: absolute;
-    width:300px;
+    width:250px;
     height:100px;
-    margin-left: 140px;
-    margin-top: 390px;
+    margin-left: 120px;
+    margin-top: 400px;
+    font-family: "Trebuchet MS", Dotum;  
 }
 #first{
 	position: absolute;
-    width:300px;
+    width:250px;
     height:100px;
-    margin-left: 490px;
-    margin-top: 235px;
+    margin-left: 425px;
+    margin-top: 260px;
+   font-family: "Trebuchet MS", Dotum;
 }
 
 #second{
 	position: absolute;
-    width:300px;
+    width:250px;
     height:100px;
-    margin-left: 490px;
-    margin-top: 315px;
+    margin-left: 425px;
+    margin-top: 330px;
+    font-family: "Trebuchet MS", Dotum; 
 }
 
 #third{
 	position: absolute;
-    width:300px;
+    width:250px;
     height:100px;
-    margin-left: 490px;
-    margin-top: 390px;
+    margin-left: 425px;
+    margin-top: 400px;
+    font-family: "Trebuchet MS", Dotum;  
 
 }
 
@@ -148,16 +198,16 @@ a:hover {
 	width: 50px;
 	height: 50px;
 	float: left;
+
 }
 
 
 #one ul, #two ul, #three ul, #first ul, #second ul, #third ul{
 	 list-style-type: none;
 	 margin-left: 20px;
-	 margin-top: 2px; 
+	 margin-top: 3px; 
+	 font-family: "Trebuchet MS", Dotum; 
 }
-
-
 
 .make{
 	margin-left: 100px;
@@ -170,21 +220,23 @@ a:hover {
 }
 
 .make_btn {
-    margin-left: 770px;
-    margin-top: -120px;
+    margin-left: 660px;
+    margin-top: -110px;
     width: 200px;
     height: 30px;
     vertical-align: middle;
     background-color: white;
     border: 1px solid #797a7b;
+    border-radius: .25em;
+    font-weight: bold;
 }
 
 #project{
 	position : absolute;
-	width : 245px;
-	height : 150px;
-	margin-left: 900px;
-	margin-top: 235px;
+	width : 200px;
+	height : 130px;
+	margin-left: 760px;
+	margin-top: 260px;
 	border: 1px solid #797a7b;
 	border-radius: .25em;
 	
@@ -200,57 +252,60 @@ a:hover {
 	word-break : break-;
 	} */
 
+
 #project ul li:NTH-CHILD(2){
-	font-size: 22px;
-	padding-left: 40px;
+	font-size: 18px;
+	padding-left: 20px;
 	padding-top : -10px;
 	text-overflow:ellipsis;
+	font-family: "Trebuchet MS", Dotum;  
+	font-weight: bold;
+	
 	
 }
 
 #project ul li:NTH-CHILD(3){
 	font-size: 12px;
 	text-overflow:ellipsis;
-	margin-top: 25px;
+	margin-top: 13px;
 	margin-left: -20px;
-	
-	
 }
 
 #project li img{
 	width: 50px;
 	height: 50px;
-	margin-left: -24px;
+	padding-right : 10px;
+	margin-left: -15px;
 	float: left;
-	
-	
 }
 
 #manage{
 	position: absolute;
-	width: 300px;
+	width: 200px;
 	height: 40px;
 	border:none;
 	font-size: 25px;
 	color: white;
 	background-color: #2d2d2d; 
 	 text-align: center;
-	 margin-top: 180px;
-	 margin-left: 870px;
+	 margin-top: 200px;
+	 margin-left: 760px;
 	 border-radius: .25em;
 }
 
 .ok, .no{
-	margin-top: 17px;
-	margin-left: 20px;
+	margin-top: 8px;
+	margin-left: 10px;
 	float: left;
-	width: 50px;
-	height: 30px;
+	width: 40px;
+	height: 25px;
 	border: 1px solid #2d2d2d; 
 	background-color : #535353;
 	color: white;
 	border-radius: .25em;
 	box-shadow: ;
+	margin-right: 15px;
+    cursor: pointer; 
 }
 
 

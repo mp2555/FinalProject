@@ -18,6 +18,7 @@ public class ProjectController {
 	public ProjectController() {
 		
 	}
+<<<<<<< HEAD
 	/////////
 	@RequestMapping("/information.do")
 	public ModelAndView testMethod(){
@@ -25,11 +26,28 @@ public class ProjectController {
 		mav.setViewName("information");
 		return mav;
 	}
+=======
+	
+>>>>>>> refs/remotes/origin/master
 	
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("dashboard");
+		return mav;
+	}
+	
+	@RequestMapping("/project_member.do")
+	public ModelAndView memberMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("project_member");
+		return mav;
+	}
+	
+	@RequestMapping("/calendar.do")
+	public ModelAndView calendarMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("calendar");
 		return mav;
 	}
 	
@@ -39,6 +57,7 @@ public class ProjectController {
 		mav.setViewName("project");
 		return mav;
 	}
+	
 	
 	
 	
