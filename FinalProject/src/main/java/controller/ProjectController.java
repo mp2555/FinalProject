@@ -33,7 +33,33 @@ public class ProjectController {
 		return mav;
 	}
 	
+	@RequestMapping("/calendar.do")
+	public ModelAndView calendarMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("calendar");
+		return mav;
+	}
 	
+	@RequestMapping("/project.do")
+	public ModelAndView projectMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("project");
+		return mav;
+	}
+	
+	@RequestMapping("/login.do")
+	public ModelAndView loginMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("loginpage");
+		return mav;
+	}
+	
+	@RequestMapping("/join.do")
+	public ModelAndView joinMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("joinpage");
+		return mav;
+	}
 
 }// end class
 
