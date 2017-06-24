@@ -24,14 +24,14 @@ public class MemberController {
 	@RequestMapping("/login.do")
 	public ModelAndView loginMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("loginpage");
+		mav.setViewName("login");
 		return mav;
 	}
 	
 	@RequestMapping("/join.do")
 	public ModelAndView joinMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("joinpage");
+		mav.setViewName("join");
 		return mav;
 	}
 	

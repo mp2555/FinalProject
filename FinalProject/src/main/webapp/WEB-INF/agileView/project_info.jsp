@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<link rel="stylesheet" type="text/css" href="css/project.css" />
+<link rel="stylesheet" type="text/css" href="css/project_info.css" />
 <link rel="stylesheet" type="text/css" href="css/header.css" />
 
 </head>
