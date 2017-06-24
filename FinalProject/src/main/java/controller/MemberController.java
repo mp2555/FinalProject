@@ -19,6 +19,8 @@ public class MemberController {
 		// TODO Auto-generated constructor stub
 	}
 
+	//http://localhost:8090/project/login.do
+	
 	@RequestMapping("/login.do")
 	public ModelAndView loginMethod(){
 		ModelAndView mav = new ModelAndView();
@@ -33,10 +35,10 @@ public class MemberController {
 		return mav;
 	}
 	
-	@RequestMapping("/information.do")
+	@RequestMapping("/profile.do")
 	public ModelAndView testMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("information");
+		mav.setViewName("profile");
 		return mav;
 	}
 	

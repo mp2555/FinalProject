@@ -3,14 +3,14 @@ package controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import service.CardService;
+import service.WikiService;
 
 @Controller
 public class WikiController {
 
-	private CardService service;
+	private WikiService service;
 
-	public void setService(CardService service) {
+	public void setService(WikiService service) {
 		this.service = service;
 	}
 

@@ -3,14 +3,14 @@ package controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import service.CardService;
+import service.CalendarService;
 
 @Controller
 public class CalendarController {
 
-	private CardService service;
+	private CalendarService service;
 
-	public void setService(CardService service) {
+	public void setService(CalendarService service) {
 		this.service = service;
 	}
 
