@@ -33,13 +33,12 @@ public class MemberController {
 		return mav;
 	}
 	
-	/*@RequestMapping("/information.do")
-	public ModelAndView testMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("information");
-		return mav;
+	@RequestMapping("information.do")
+	public ModelAndView informationMethod(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("information");
+		return mv;
 	}
-	*/
 
 }// end class
 

@@ -75,7 +75,7 @@ button {
 	top: 60px;
 }
 
-	.main-Kanban1{
+.main-Kanban1{
 	position:absolute;
 	width:100%;
 	top:100px;
