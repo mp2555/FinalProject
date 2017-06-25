@@ -10,6 +10,20 @@
 
 /* -----------------------------------*/
 
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+
+
+
 .main-Kanban1{
 	margin : 3px;
 	padding : 60px 0 0 30px;
@@ -158,11 +172,15 @@ p{
 }
 
 .small-table{
+	left : 0px;
+	top : 0px;
+	float : left;
 	margin: 20px;
 	width: 220px;
 	height: 100px;
 	border: 3px solid #d8d8d8;
 	border-radius: 5px;
+	cursor: move;
 }
 
 
@@ -180,4 +198,12 @@ form{
 	width: 180px;
 }
 
+/* #table-inner1{
+	background-color: black;
+} */
+
+
+.inner div{
+	background-color: yellow;
+}
 

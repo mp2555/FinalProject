@@ -10,7 +10,7 @@ import service.CardService;
 public class KanbanController {
 
 	private CardService service;
-
+ 
 	public void setService(CardService service) {
 		this.service = service;
 	}
