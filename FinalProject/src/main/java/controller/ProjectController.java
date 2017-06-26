@@ -34,17 +34,25 @@ public class ProjectController {
 		return mav;
 	}
 	
-	@RequestMapping("/calendar.do")
-	public ModelAndView calendarMethod(){
+	
+	@RequestMapping("/project_info.do")
+	public ModelAndView projectMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("calendar");
+		mav.setViewName("project_info");
 		return mav;
 	}
 	
-	@RequestMapping("/project.do")
-	public ModelAndView projectMethod(){
+	@RequestMapping("/wiki.do")
+	public ModelAndView wikiMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("project");
+		mav.setViewName("wiki");
+		return mav;
+	}
+	
+	@RequestMapping("/timeline.do")
+	public ModelAndView timelineMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("timeline");
 		return mav;
 	}
 	

@@ -8,6 +8,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" type="text/css" href="css/project_member.css" />
 <link rel="stylesheet" href="/v-1495533137927/styles/theme-taiga.css">
+<link rel="stylesheet" type="text/css" href="css/header.css" />
 </head>
 <body>
 
