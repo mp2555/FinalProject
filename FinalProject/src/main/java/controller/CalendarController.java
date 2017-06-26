@@ -2,15 +2,16 @@ package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import service.CardService;
+import service.CalendarService;
 
 @Controller
 public class CalendarController {
 
-	private CardService service;
+	private CalendarService service;
 
-	public void setService(CardService service) {
+	public void setService(CalendarService service) {
 		this.service = service;
 	}
 
@@ -19,5 +20,14 @@ public class CalendarController {
 		// TODO Auto-generated constructor stub
 
 	}
+	
+	@RequestMapping("/calendar.do")
+	public ModelAndView calendarMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("calendar");
+		return mav;
+	}
+	
+	
 
 }// end class

@@ -18,7 +18,13 @@
 				<li id="home"><a href="#" id="home"><img id="home"
 						src="images/home.png" width="45" height="30" /></a></li>
 				<li id="logo1">Love Your Project</li>
-				<li><a href="#" id="profile">PROFILE</a></li>
+				<li><a href="#" id="profile">PROFILE</a>
+				<ul class="dropmenu">
+                      	<li><a href="#">프로필 보기</a><hr style="border:solid 1px #e2e2e2"/></li>
+           				<li><a href="#">프로필 수정</a><hr style="border:solid 1px #e2e2e2"/></li>
+           				<li><a href="#">로그아웃</a></li>
+        				 </ul>
+				</li>
 			</ul>
 
 		</div>
@@ -128,8 +134,8 @@
 				<li><img alt="사진" src="images/profile.png">
 				<li>FINAL PROJECT</li>
 				<li>프로젝트 설명</li>
-				<li><input type="submit" value="수락" class="ok">
-				<li><input type="reset" value="거절" class="no">
+				<li><input type="submit" value="수락" class="ok"/></li>
+				<li><input type="reset" value="거절" class="no"/></li>
 			</ul>
 		</div>
 
