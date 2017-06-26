@@ -385,6 +385,7 @@ $(document).ready(function(){
 
 </head>
 <body class="page-signup">
+<form name="frm" id="frm" method="post">
 	<div class="section-wrapper layout-grid-frame">
 		<div id="signup-form" class="layout-twothirds-center">
 
@@ -406,12 +407,12 @@ $(document).ready(function(){
 				<label for="password">Password</label> 
 				<div id="pass-error" class="hidden error-message">
 				</div><input type="password"
-					name="password" id="password" tabindex="0" placeholder="비밀번호">
+					name="pass" id="password" tabindex="0" placeholder="비밀번호">
 				<input type="password" name="passwordChk" id="passwordChk"
 					tabindex="0" placeholder="비밀번호확인">
 					
 					 <input id="signup"
-					tabindex="0" type="button" class="button button-green" value="SIGN UP">
+					tabindex="0" type="submit" class="button button-green" value="SIGN UP">
 			</div>
 			<p class="quiet">
 				이미 회원이신가요? <a href="/login" tabindex="0">로그인하기</a>
@@ -434,5 +435,7 @@ $(document).ready(function(){
 		</ul>
 		<p>© Copyright 2017, Trello, Inc. All rights reserved.</p>
 	</footer> -->
+	
+	</form>
 </body>
 </html>

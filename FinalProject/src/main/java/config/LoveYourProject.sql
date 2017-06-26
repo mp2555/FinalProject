@@ -171,6 +171,7 @@ CREATE TABLE card_comment
 CREATE TABLE final_mem
 (
 	mem_num number NOT NULL,
+	name varchar2(50) NOT NULL,
 	email varchar2(50) NOT NULL UNIQUE,
 	pass varchar2(50) NOT NULL,
 	introduce varchar2(350),
@@ -178,6 +179,14 @@ CREATE TABLE final_mem
 	PRIMARY KEY (mem_num)
 );
 
+select * from final_mem;
+
+insert into final_mem 
+values(SEQ_final_mem_mem_num.nextval,'DDD','dmsql@daum.net','111111!',null,null)
+
+
+insert into final_mem(mem_num, name, email, pass)
+values(SEQ_final_mem_mem_num.nextval,'aaa','AAAA@daum.net','22222!')
 
 CREATE TABLE team
 (
@@ -481,7 +490,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 
 

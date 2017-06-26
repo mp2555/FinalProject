@@ -52,7 +52,7 @@
 	</aop:config>
 
 	<!-- [7] DAO 빈 선언 -->
-	<bean id="dao_Member" class="dao.MebmerDAOImp">
+	<bean id="dao_Member" class="dao.MemberDAOImp">
 		<property name="sqlSession" ref="sqlSession" />
 	</bean>
 	<bean id="dao_Project" class="dao.ProjectDAOImp">

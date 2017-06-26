@@ -19,7 +19,6 @@ public class ProjectController {
 		
 	}
 	
-	
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod(){
 		ModelAndView mav = new ModelAndView();
@@ -56,10 +55,6 @@ public class ProjectController {
 		return mav;
 	}
 	
-	
-	
-	
-
 }// end class
 
 
