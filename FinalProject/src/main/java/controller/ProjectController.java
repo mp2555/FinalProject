@@ -27,10 +27,10 @@ public class ProjectController {
 		return mav;
 	}
 	
-	@RequestMapping("/project_member.do")
+	@RequestMapping("/member.do")
 	public ModelAndView memberMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("project_member");
+		mav.setViewName("member");
 		return mav;
 	}
 	

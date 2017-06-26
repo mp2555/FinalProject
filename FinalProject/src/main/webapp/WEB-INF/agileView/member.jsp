@@ -11,10 +11,10 @@
 </head>
 <body>
 
-<jsp:include page="header.jsp"></jsp:include> 
+
 
 <div id="all">
-
+<jsp:include page="header.jsp"></jsp:include> 
 		<div class="main-Kanban1">
 			<h1>
 				<span class="project-name">KH 파이널</span> <span class="project-detail">멤버관리</span>

@@ -5,7 +5,9 @@
 
 <mapper namespace="member">
 
-	
+	<select id="mypage" parameterType="int" resultType="dto.MemberDTO">
+		select * from final_mem where num=#{num}
+	</select>
 </mapper>   
 
 

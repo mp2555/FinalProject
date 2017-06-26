@@ -177,7 +177,7 @@ CREATE TABLE final_mem
 	picture varchar2(40),
 	PRIMARY KEY (mem_num)
 );
-
+select * from final_mem
 
 CREATE TABLE team
 (
