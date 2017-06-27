@@ -9,6 +9,9 @@ insert into final_mem(mem_num, name, email, pass)
 values(SEQ_final_mem_mem_num.nextval,#{name},#{email},#{pass})
 </select>
 
+	<select id="profile" parameterType="String" resultType="dto.MemberDTO">
+		select * from final_mem where email=#{email}
+	</select>
 	
 </mapper>   
 

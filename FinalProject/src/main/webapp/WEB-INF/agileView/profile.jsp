@@ -8,25 +8,39 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" type="text/css" href="css/profile.css" />
 <link rel="stylesheet" href="/v-1495533137927/styles/theme-taiga.css">
+<script type="text/javascript">
+/* $("img").each(function() {
+	  var $imgTag = $(this);
+	  var real_width, real_height;
 
+	  $("<img/>") 
+	      .attr("src", $imgTag.attr("src"))
+	      .load(function() {
+	          real_width = this.width;   
+	          real_height = this.height;
+	      });
+	}); */
+
+</script>
 </head>
 <body>
 
 
 	<div id="all">
-
+	
 		<div id="horizontal-menu">
                   <ul class="navbar">
                       <li id="home"><a href="#" id="home"><img id="home" src="images/home.png"
                       width="45" height="30"/></a></li>
                       <li id="logo1" >Love Your Project</li>
                       <li ><a href="#" id="profile">PROFILE</a>
+
                       <ul class="dropmenu">
                       	<li><a href="#">프로필 보기</a><hr style="border:solid 1px #e2e2e2"/></li>
            				<li><a href="#">프로필 수정</a><hr style="border:solid 1px #e2e2e2"/></li>
            				<li><a href="#">로그아웃</a></li>
         				 </ul>
-                      
+
                       </li>
                   </ul>
 
@@ -56,7 +70,13 @@
 	<div id="center">
 		<div class='profile'>
 			<ul>
-				<li><img alt="pro" src="images/profile.png"></li>
+				<li>
+				<%-- <div contentEditable="true">
+ 				 <img  src="images/profile.png" /> 
+  					${dto.name}
+						</div>
+						</li> --%>
+				 <img alt="pro" src="images/profile.png"></li>
 				<li><label for="ex_filename">사진변경하기</label> <input type="file"
 					id="ex_filename" class="upload-hidden"></li>
 			</ul>
@@ -69,7 +89,7 @@
 				</p>
 				<p>
 					<input type="text" name="name" id="name" placeholder="이름"
-						data-required="true" maxlength="45" aria-invalid="false"
+						data-required="true" maxlength="45" aria-invalid="false" value="${dto.name}"
 						style="width: 255px; height: 20px;" />
 				</p>
 
@@ -78,7 +98,7 @@
 				</p>
 				<p>
 					<input type="text" name="email" id="checkemail" placeholder="이메일"
-						placeholder="이름" data-required="true" maxlength="45"
+						placeholder="이름" data-required="true" maxlength="45" value="${dto.email}" readOnly
 						aria-invalid="false" style="width: 255px; height: 20px;">
 				</p>
 
@@ -86,8 +106,8 @@
 					<label for="introduce">INTRODUCE</label>
 				</p>
 				<p>
-					<textarea rows="15" cols="34" data-required="true"
-						aria-invalid="false" style="margin-top: 0px; margin-bottom: 0px;"></textarea>
+					<textarea rows="15" cols="34" data-required="true" 
+						aria-invalid="false" style="margin-top: 0px; margin-bottom: 0px;">${dto.introduce}</textarea>
 				</p>
 
 				<input id="save" type="submit" value="SAVE" /> <input id="cancle"

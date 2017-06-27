@@ -27,29 +27,30 @@ public class ProjectController {
 	public void setService(ProjectService service) {
 		this.service = service;
 	}
-
+	
 	public ProjectController() {
-
+		
 	}
-
+	
+	
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("dashboard");
 		return mav;
 	}
-
+	
 	@RequestMapping("/project_member.do")
 	public ModelAndView memberMethod() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("project_member");
 		return mav;
 	}
-
+	
+	
 	@RequestMapping("/project_info.do")
 	public ModelAndView projectMethod() {
 		ModelAndView mav = new ModelAndView();
-
 		mav.setViewName("project_info");
 		return mav;
 	}
@@ -99,7 +100,7 @@ public class ProjectController {
 	}
 
 	@RequestMapping("/wiki.do")
-	public ModelAndView wikiMethod() {
+	public ModelAndView wikiMethod(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("wiki");
 		return mav;
@@ -111,4 +112,5 @@ public class ProjectController {
 		mav.setViewName("timeline");
 		return mav;
 	}
+	
 }// end class
