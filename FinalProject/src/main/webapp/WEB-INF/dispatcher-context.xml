@@ -52,7 +52,7 @@
 	</aop:config>
 
 	<!-- [7] DAO 빈 선언 -->
-	<bean id="dao_Member" class="dao.MemberDAOImp">
+	<bean id="dao_Member" class="dao.MebmerDAOImp">
 		<property name="sqlSession" ref="sqlSession" />
 	</bean>
 	<bean id="dao_Project" class="dao.ProjectDAOImp">
@@ -90,6 +90,7 @@
 	<bean id="service_Calendar" class="service.CalendarServiceImp">
 		<property name="dao" ref="dao_Calendar" />
 	</bean>
+	
 
 
 	<!-- [9] Controller 빈 선언 -->
@@ -107,6 +108,9 @@
 	</bean>
 	<bean class="controller.CalendarController">
 		<property name="service" ref="service_Calendar" />
+	</bean>
+	<bean class="controller.KanbanController">
+		<property name="service" ref="service_Kanban" />
 	</bean>
 
 

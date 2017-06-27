@@ -18,15 +18,6 @@ DROP TRIGGER TRI_NEW_TABLE_sum_mem_num;
 DROP TRIGGER TRI_sub_mem_sum_mem_num;
 
 
-select p.pro_title from final_mam f,team t,middle m,project p 
-where f.mem_num=t.mem_num and t.team_num=m.team_num and m.pro_num=p.pro_num
-
-
-
-select c.card from middle m,project p,kanban k
-where m.pro_num=p.pro_num=k.pro_num ;
-
-
 
 /* Drop Tables */
 
@@ -108,7 +99,8 @@ insert into kanban(kanban_num,kanban_order,kanban_name,pro_num)
 values(SEQ_kanban_kanban_num.nextval,1,'Ready',1)
 
 
-
+select p.pro_title,k.kanban_name from project p,kanban k,card c,card_mem cm
+where p.pro_num=k.pro_num and k.kanban_num=c.kanban_num and c.card_num=cm.card_num
 
 
 CREATE TABLE chk_res
@@ -163,6 +155,10 @@ CREATE TABLE card_mem
 	PRIMARY KEY (card_mem_num)
 );
 
+select * from card_mem
+insert into card_mem(card_mem_num,card_num,card_mem) values(SEQ_card_mem_card_mem_num.nextval,1,'안정환')
+
+
 
 CREATE TABLE card_file
 (
@@ -189,17 +185,39 @@ CREATE TABLE card_comment
 CREATE TABLE final_mem
 (
 	mem_num number NOT NULL,
+<<<<<<< HEAD
+	name varchar2(30) NOT NULL,
+=======
+	name varchar2(50) NOT NULL,
+>>>>>>> branch 'master' of https://github.com/mp2555/FinalProject.git
 	email varchar2(50) NOT NULL UNIQUE,
 	pass varchar2(50) NOT NULL,
 	introduce varchar2(350),
 	picture varchar2(40),
 	PRIMARY KEY (mem_num)
 );
+<<<<<<< HEAD
+insert into final_mem values(SEQ_final_mem_mem_num.nextval,'주수경','wntnrud00@hanmail.net','1234','소개','')
+insert into final_mem values(SEQ_final_mem_mem_num.nextval,'안정환','dks3344@naver.com','1234','소개','')
+select * from final_mem
+select * from final_mem where email='wntnrud00@hanmail.net'
+=======
 
 select * from final_mem;
+<<<<<<< HEAD
 insert into final_mem(mem_num,email,pass,introduce,picture) values(.nextval,'dks3344@naver.com',1234,'안정환입니다.','사진')
 
+=======
 
+insert into final_mem 
+values(SEQ_final_mem_mem_num.nextval,'DDD','dmsql@daum.net','111111!',null,null)
+
+
+insert into final_mem(mem_num, name, email, pass)
+values(SEQ_final_mem_mem_num.nextval,'aaa','AAAA@daum.net','22222!')
+>>>>>>> refs/remotes/origin/master
+
+>>>>>>> refs/remotes/origin/master
 CREATE TABLE team
 (
 	team_num number NOT NULL,
@@ -514,7 +532,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 
 

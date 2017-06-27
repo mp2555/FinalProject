@@ -67,7 +67,7 @@
 
 				var des = $('#descripction').val();
 
-				$("#save").on(
+				$("#reg").on(
 						'click',
 						function() {
 							if ($('#pname').val() == '') {
@@ -79,26 +79,34 @@
 								$('[name=pro_title]').val(
 										$('[name=pro_title]').val().replace(
 												/\n/gi, '<br/>'));
-								$('#frm').attr('action', 'project_info.do')
+								$('#frm').attr('action', 'project_reg.do')
 										.submit();
+								return false;
 							}
 						});
 
+				$(".cancle").on('click',function(){
+					alert('test');
+					$('#frm2').attr('action', 'dashboard.do')
+					.submit();
+					return false;
+				});
 			});
 </script>
 </head>
 <body>
+	<form name="frm2" id="frm2" method="get" ></form>
 	<form name="frm" id="frm" method="post" enctype="multipart/form-data">
 		<div id="all">
 			<jsp:include page="header.jsp"></jsp:include>
-			
+
+
 			<div class="main-Kanban1">
 				<h1>
 					<span class="project-name">KH 파이널</span> <span
 						class="project-detail">프로젝트 등록</span>
 				</h1>
 			</div>
-
 
 			<div id="form">
 
@@ -113,7 +121,6 @@
 							name="filename" id="ex_file">
 					</div>
 				</div>
-
 
 				<div id="aaa">
 					<label>PROJECT NAME</label>
@@ -136,9 +143,9 @@
 				</div>
 
 				&nbsp;
-				<button id='save' type="button" title="저장">저장</button>
+				<button id='reg' type="button" title="등록">등록</button>
 				&nbsp;&nbsp;&nbsp;
-				<button title="프로젝트 삭제하기" class="delete">프로젝트 삭제하기</button>
+				<button title="프로젝트 삭제하기" class="cancle">취소</button>
 			</div>
 		</div>
 	</form>

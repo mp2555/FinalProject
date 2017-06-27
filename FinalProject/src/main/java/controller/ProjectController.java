@@ -27,34 +27,43 @@ public class ProjectController {
 	public void setService(ProjectService service) {
 		this.service = service;
 	}
-
+	
 	public ProjectController() {
-
+		
 	}
-
+	
+	
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("dashboard");
 		return mav;
 	}
-
+	
 	@RequestMapping("/project_member.do")
 	public ModelAndView memberMethod() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("project_member");
 		return mav;
 	}
-
+	
+	
 	@RequestMapping("/project_info.do")
 	public ModelAndView projectMethod() {
 		ModelAndView mav = new ModelAndView();
-
 		mav.setViewName("project_info");
 		return mav;
 	}
 
-	@RequestMapping(value = "/project_info.do", method = RequestMethod.POST)
+	@RequestMapping("/project_reg.do")
+	public ModelAndView projectRegMethod() {
+		ModelAndView mav = new ModelAndView();
+
+		mav.setViewName("project_reg");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/project_reg.do", method = RequestMethod.POST)
 	public String projectClearMethod(ProjectDTO dto, HttpServletRequest request) {
 		MultipartFile file = dto.getFilename();
 
@@ -91,7 +100,7 @@ public class ProjectController {
 	}
 
 	@RequestMapping("/wiki.do")
-	public ModelAndView wikiMethod() {
+	public ModelAndView wikiMethod(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("wiki");
 		return mav;
@@ -103,4 +112,5 @@ public class ProjectController {
 		mav.setViewName("timeline");
 		return mav;
 	}
+	
 }// end class
