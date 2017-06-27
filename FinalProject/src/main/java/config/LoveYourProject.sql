@@ -18,6 +18,15 @@ DROP TRIGGER TRI_NEW_TABLE_sum_mem_num;
 DROP TRIGGER TRI_sub_mem_sum_mem_num;
 
 
+select p.pro_title from final_mam f,team t,middle m,project p 
+where f.mem_num=t.mem_num and t.team_num=m.team_num and m.pro_num=p.pro_num
+
+
+
+select c.card from middle m,project p,kanban k
+where m.pro_num=p.pro_num=k.pro_num ;
+
+
 
 /* Drop Tables */
 
@@ -79,6 +88,8 @@ CREATE SEQUENCE SEQ_card_comment_comment_num INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_subscribe_sub_num INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_sub_mem_sum_mem_num INCREMENT BY 1 START WITH 1;
 
+CREATE SEQUENCE SEQ_kanban_kanban_num INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SEQ_card_card_num INCREMENT BY 1 START WITH 1;
 
 
 /* Create Tables */
@@ -91,6 +102,13 @@ CREATE TABLE kanban
 	pro_num number NOT NULL,
 	PRIMARY KEY (kanban_num)
 );
+
+select * from kanban
+insert into kanban(kanban_num,kanban_order,kanban_name,pro_num) 
+values(SEQ_kanban_kanban_num.nextval,1,'Ready',1)
+
+
+
 
 
 CREATE TABLE chk_res
@@ -178,6 +196,9 @@ CREATE TABLE final_mem
 	PRIMARY KEY (mem_num)
 );
 
+select * from final_mem;
+insert into final_mem(mem_num,email,pass,introduce,picture) values(.nextval,'dks3344@naver.com',1234,'안정환입니다.','사진')
+
 
 CREATE TABLE team
 (
@@ -188,6 +209,10 @@ CREATE TABLE team
 	PRIMARY KEY (team_num)
 );
 
+select * from team
+insert into team(team_num,mem_num) values(SEQ_team_team_num.nextval,1);
+
+select pass from final_mem,team where final_mem.mem_num=team.mem_num
 
 CREATE TABLE middle
 (
@@ -205,6 +230,9 @@ CREATE TABLE project
 	PRIMARY KEY (pro_num)
 );
 
+select * from project;
+insert into project(pro_num,pro_title,pro_des) 
+values(SEQ_project_pro_num.nextval,'3조 프로젝트!!!','프로젝트 설명')
 
 CREATE TABLE calender
 (
@@ -231,6 +259,11 @@ CREATE TABLE card
 	due_date date,
 	PRIMARY KEY (card_num)
 );
+
+select * from card;
+insert into card(card_num,kanban_num,chef_mem,card_name,tag,descript,card_order,card_when,due_date) 
+		values(SEQ_card_card_num.nextval,1,1,'프로젝트수정','project','ㅎㅎ',1,sysdate,sysdate);
+
 
 
 CREATE TABLE subscribe

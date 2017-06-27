@@ -207,3 +207,19 @@ form{
 	background-color: yellow;
 }
 
+
+
+
+
+
+ #table-inner1 .small1 
+         .highlight {
+            border: 1px solid red;
+            font-weight: bold;
+            font-size: 45px;
+            background-color: blue;
+         }
+         .inner{
+         background: green;
+         }
+

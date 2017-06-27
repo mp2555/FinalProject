@@ -5,32 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script  src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js">
+</script>
 <link rel="stylesheet" type="text/css" href="css/kanban.css" />
 <link rel="stylesheet" type="text/css" href="css/header.css" />
  
+
+
 </head>
 <script type="text/javascript">
 
-$(document).ready(function(){
+
 	
-});
-
- 	/* $("#table-inner1").sortable({
-		axis : "y",
-		revert:true,
-		scroll:false,
-		placeholder : "sortable-placeholder",
-		cursor:"move"
-	});  */
-
 	  function drag(target, e){ //드래그 시작시 호출 함수
 		e.dataTransfer.setData('Text',target.id);
 	};
 	
 	function drop(target, e){ //드롭시 호출 함수
 		var id=e.dataTransfer.getData('Text');
-		target.appendChild(document.getElementById(id));
+		target.append(document.getElementById(id));
 		e.preventDefault();
 	};
  
@@ -72,7 +66,9 @@ $(document).ready(function(){
 							<a href="#">삭제</a>
 						</div>
 						
-						<div id="table-inner1" class="inner container" ondragover="return false;" ondragenter="return false;" ondrop="drop(this, event);" >
+					
+						<div id="table-inner1" class="inner" ondragover="return false;" ondragenter="return false;" ondrop="drop(this, event);" >
+					
 						
 							<div class="small-table"  draggable="true" id="small1" ondragstart="drag(this, event)">
 								<div>
@@ -82,9 +78,10 @@ $(document).ready(function(){
 									</h2>
 								</div>
 							</div>
+							
 							<!-- small-tabel end -->
 
-
+							
 							<div class="small-table" draggable="true" id="small2" ondragstart="drag(this, event)">
 								<div>
 									<p>할당된 사람 : 서지환</p>
@@ -93,8 +90,11 @@ $(document).ready(function(){
 									</h2>
 								</div>
 							</div>
+						
 							<!-- small-tabel end -->
+						
 					</div><!-- table-inner1 end -->
+				
 					</div>
 
 
@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 
 						<!-- 내부 칸반 div -->
-						<div id="table-inner2"  class="inner container" ondragover="return false;" ondragenter="return false;" ondrop="drop(this, event);">
+						<div id="table-inner2"  class="inner" ondragover="return false;" ondragenter="return false;" ondrop="drop(this, event);">
       				
 							<div class="small-table" draggable="true" id="small3" ondragstart="drag(this, event)">
 								<div>
