@@ -55,7 +55,7 @@ text-decoration: none;
 
 #horizontal-menu li ul {
 background: white;
-display:none;  /* 평상시에는 서브메뉴가 안보이게 하기 */
+display:none;  /* �룊�긽�떆�뿉�뒗 �꽌釉뚮찓�돱媛� �븞蹂댁씠寃� �븯湲� */
 height:auto;
 width:120px;
 padding:5px; 
@@ -67,12 +67,12 @@ left:860px;
 list-style-type: none;
 z-index: 1;
 border:2px solid #ececec;
-   border-radius: .25em;
+border-radius: .25em;
 
 }
 
 #horizontal-menu li:hover ul {
-display:block;   /* 마우스 커서 올리면 서브메뉴 보이게 하기 */
+display:block;   /* 留덉슦�뒪 而ㅼ꽌 �삱由щ㈃ �꽌釉뚮찓�돱 蹂댁씠寃� �븯湲� */
 }
  
  #horizontal-menu .profile a{
