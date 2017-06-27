@@ -18,8 +18,7 @@ public class ProjectController {
 	public ProjectController() {
 		
 	}
-
-
+	
 	@RequestMapping("/dashboard.do")
 	public ModelAndView boardMethod(){
 		ModelAndView mav = new ModelAndView();
@@ -34,24 +33,28 @@ public class ProjectController {
 		return mav;
 	}
 	
-	@RequestMapping("/calendar.do")
-	public ModelAndView calendarMethod(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("calendar");
-		return mav;
-	}
 	
-	@RequestMapping("/project.do")
+	@RequestMapping("/project_info.do")
 	public ModelAndView projectMethod(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("project");
+		mav.setViewName("project_info");
 		return mav;
 	}
 	
+	@RequestMapping("/wiki.do")
+	public ModelAndView wikiMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("wiki");
+		return mav;
+	}
 	
+	@RequestMapping("/timeline.do")
+	public ModelAndView timelineMethod(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("timeline");
+		return mav;
+	}
 	
-	
-
 }// end class
 
 

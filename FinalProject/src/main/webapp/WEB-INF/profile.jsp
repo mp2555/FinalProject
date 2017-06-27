@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<link rel="stylesheet" type="text/css" href="css/information.css" />
+<link rel="stylesheet" type="text/css" href="css/profile.css" />
 <link rel="stylesheet" href="/v-1495533137927/styles/theme-taiga.css">
 
 </head>
@@ -20,7 +20,14 @@
                       <li id="home"><a href="#" id="home"><img id="home" src="images/home.png"
                       width="45" height="30"/></a></li>
                       <li id="logo1" >Love Your Project</li>
-                      <li ><a href="#" id="profile">PROFILE</a></li>
+                      <li ><a href="#" id="profile">PROFILE</a>
+                      <ul class="dropmenu">
+                      	<li><a href="#">프로필 보기</a><hr style="border:solid 1px #e2e2e2"/></li>
+           				<li><a href="#">프로필 수정</a><hr style="border:solid 1px #e2e2e2"/></li>
+           				<li><a href="#">로그아웃</a></li>
+        				 </ul>
+                      
+                      </li>
                   </ul>
 
               </div>

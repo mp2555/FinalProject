@@ -1,6 +1,7 @@
 package service;
 
 import dao.MemberDAO;
+import dto.MemberDTO;
 
 public class MemberServiceImp implements MemberService{
 
@@ -12,6 +13,11 @@ public class MemberServiceImp implements MemberService{
 	
 	public MemberServiceImp() {
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void insertProcess(MemberDTO dto) {
+		dao.reg(dto);
 	}
 	
 }//end class

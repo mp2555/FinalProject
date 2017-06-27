@@ -4,14 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import service.CardService;
+import service.KanbanService;
 
 @Controller
 public class KanbanController {
 
-	private CardService service;
- 
-	public void setService(CardService service) {
+
+	private KanbanService service;
+
+	public void setService(KanbanService service) {
+
 		this.service = service;
 	}
 
