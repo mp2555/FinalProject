@@ -4,7 +4,15 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="project">
-
+	
+	<select id="working" resultType="dto.Pro">
+		select p.pro_title,k.kanban_name from project p,kanban k,card c,card_mem cm
+		where p.pro_num=k.pro_num and k.kanban_num=c.kanban_num and c.card_num=cm.card_num
+	</select>
+	
+	
+	
+	
 	
 </mapper>   
 
