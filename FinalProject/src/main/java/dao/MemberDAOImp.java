@@ -4,7 +4,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 
 import dto.MemberDTO;
 
-public class MebmerDAOImp implements MemberDAO {
+public class MemberDAOImp implements MemberDAO {
 
 	private SqlSessionTemplate sqlSession;
 
@@ -12,22 +12,13 @@ public class MebmerDAOImp implements MemberDAO {
 		this.sqlSession = sqlSession;
 	}
 
-	public MebmerDAOImp() {
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public MemberDTO profile(String email) {
-		// TODO Auto-generated method stub
-		return sqlSession.selectOne("member.profile",email);
+	public MemberDAOImp() {
+		
 	}
 
 	@Override
 	public void reg(MemberDTO dto) {
 		sqlSession.insert("member.reg",dto);
-		
 	}
-
-	
 
 }// end class

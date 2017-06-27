@@ -19,5 +19,10 @@ public class MemberServiceImp implements MemberService{
 	public MemberDTO profileProcess(String email) {
 		return dao.profile(email);
 	}
+
+	@Override
+	public void insertProcess(MemberDTO dto) {
+		dao.reg(dto);
+	}
 	
 }//end class

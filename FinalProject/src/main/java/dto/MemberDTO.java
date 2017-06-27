@@ -3,8 +3,10 @@ package dto;
 public class MemberDTO {
 
 	private int mem_num;
-	private String name,email, pass, introduce, picture;
-	
+
+	private String name, email, pass, introduce, picture;
+
+
 	public String getName() {
 		return name;
 	}

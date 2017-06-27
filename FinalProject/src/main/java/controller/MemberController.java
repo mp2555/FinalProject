@@ -1,7 +1,10 @@
 package controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import dto.MemberDTO;
@@ -29,12 +32,22 @@ public class MemberController {
 		return mav;
 	}
 	
-	@RequestMapping("/join.do")
-	public ModelAndView joinMethod(){
+	@RequestMapping(value="/join.do",method=RequestMethod.GET)
+	public ModelAndView joinMethod(MemberDTO dto){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("join");
 		return mav;
 	}
+	
+
+	@RequestMapping(value="/join.do",method=RequestMethod.POST)
+	public String joinnMethod(MemberDTO dto, HttpServletRequest request){
+		System.out.println(dto.getName()+"/"+dto.getEmail()+"/"+dto.getPass());
+		service.insertProcess(dto);
+		return "redirect:/login.do";
+	}
+	
+	
 	
 	@RequestMapping("/profile.do")
 	public ModelAndView testMethod(
@@ -57,7 +70,6 @@ public class MemberController {
 		mav.setViewName("profile");
 		return mav;
 	}
-	
 
 
 }// end class
