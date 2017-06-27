@@ -54,7 +54,15 @@ public class ProjectController {
 		return mav;
 	}
 
-	@RequestMapping(value = "/project_info.do", method = RequestMethod.POST)
+	@RequestMapping("/project_reg.do")
+	public ModelAndView projectRegMethod() {
+		ModelAndView mav = new ModelAndView();
+
+		mav.setViewName("project_reg");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/project_reg.do", method = RequestMethod.POST)
 	public String projectClearMethod(ProjectDTO dto, HttpServletRequest request) {
 		MultipartFile file = dto.getFilename();
 
