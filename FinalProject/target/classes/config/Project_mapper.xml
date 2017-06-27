@@ -5,7 +5,11 @@
 
 <mapper namespace="project">
 
-	
+	<insert id="project_make" parameterType="dto.ProjectDTO">
+		insert into project
+		values(SEQ_project_pro_num.nextval,#{pro_title},#{pro_des},#{pro_pic,jdbcType=VARCHAR})
+	</insert>
+
 </mapper>   
 
 

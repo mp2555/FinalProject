@@ -108,6 +108,9 @@
 	<bean class="controller.CalendarController">
 		<property name="service" ref="service_Calendar" />
 	</bean>
+	<bean class="controller.KanbanController">
+		<property name="service" ref="service_Kanban" />
+	</bean>
 
 
 

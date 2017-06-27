@@ -16,6 +16,22 @@
 </head>
 <script type="text/javascript">
 
+$(document)
+.ready(
+      function() {
+         var delclick = $('.divi .kanban-del');
+         var adddiv = "<div class='divi' id='divi1'> <input type='button' class='kanban-del' value='삭제' /><p>New</p><div class='option'><a id='button-add-div1' href='#'>등록</a> <a href='#'>수정</a> <a href='#'>삭제</a></div> <div id='table-inner1' class='inner'></div> </div>";
+         
+         $('.kanban-reg').on('click',function() {
+            //alert('teset');
+            $("#outline").prepend(adddiv);
+         })
+
+         $('body').on('click', '.kanban-del', function() {
+            //alert('222');
+            $(this).parent().remove();
+            });
+
 
 	
 	  function drag(target, e){ //드래그 시작시 호출 함수

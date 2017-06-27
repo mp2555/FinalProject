@@ -1,6 +1,7 @@
 package service;
 
 import dao.ProjectDAO;
+import dto.ProjectDTO;
 
 public class ProjectServiceImp implements ProjectService{
 
@@ -13,4 +14,10 @@ public class ProjectServiceImp implements ProjectService{
 	public ProjectServiceImp() {
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void saveProcess(ProjectDTO dto) {
+		dao.saveProject(dto);
+	}
+
 }//end class
