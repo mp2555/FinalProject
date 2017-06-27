@@ -11,7 +11,7 @@ import service.KanbanService;
 public class KanbanController {
 
 	private KanbanService service;
- 
+
 	public void setService(KanbanService service) {
 		this.service = service;
 	}

@@ -185,13 +185,23 @@ CREATE TABLE card_comment
 CREATE TABLE final_mem
 (
 	mem_num number NOT NULL,
+<<<<<<< HEAD
+	name varchar2(30) NOT NULL,
+=======
 	name varchar2(50) NOT NULL,
+>>>>>>> branch 'master' of https://github.com/mp2555/FinalProject.git
 	email varchar2(50) NOT NULL UNIQUE,
 	pass varchar2(50) NOT NULL,
 	introduce varchar2(350),
 	picture varchar2(40),
 	PRIMARY KEY (mem_num)
 );
+<<<<<<< HEAD
+insert into final_mem values(SEQ_final_mem_mem_num.nextval,'주수경','wntnrud00@hanmail.net','1234','소개','')
+insert into final_mem values(SEQ_final_mem_mem_num.nextval,'안정환','dks3344@naver.com','1234','소개','')
+select * from final_mem
+select * from final_mem where email='wntnrud00@hanmail.net'
+=======
 
 select * from final_mem;
 <<<<<<< HEAD
@@ -207,6 +217,7 @@ insert into final_mem(mem_num, name, email, pass)
 values(SEQ_final_mem_mem_num.nextval,'aaa','AAAA@daum.net','22222!')
 >>>>>>> refs/remotes/origin/master
 
+>>>>>>> refs/remotes/origin/master
 CREATE TABLE team
 (
 	team_num number NOT NULL,
