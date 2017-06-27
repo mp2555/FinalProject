@@ -8,7 +8,20 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" type="text/css" href="css/profile.css" />
 <link rel="stylesheet" href="/v-1495533137927/styles/theme-taiga.css">
+<script type="text/javascript">
+/* $("img").each(function() {
+	  var $imgTag = $(this);
+	  var real_width, real_height;
 
+	  $("<img/>") 
+	      .attr("src", $imgTag.attr("src"))
+	      .load(function() {
+	          real_width = this.width;   
+	          real_height = this.height;
+	      });
+	}); */
+
+</script>
 </head>
 <body>
 
@@ -21,15 +34,13 @@
                       width="45" height="30"/></a></li>
                       <li id="logo1" >Love Your Project</li>
                       <li ><a href="#" id="profile">PROFILE</a>
-<<<<<<< HEAD
-=======
+
                       <ul class="dropmenu">
                       	<li><a href="#">프로필 보기</a><hr style="border:solid 1px #e2e2e2"/></li>
            				<li><a href="#">프로필 수정</a><hr style="border:solid 1px #e2e2e2"/></li>
            				<li><a href="#">로그아웃</a></li>
         				 </ul>
-                      
->>>>>>> refs/remotes/origin/master
+
                       </li>
                   </ul>
 
@@ -59,7 +70,13 @@
 	<div id="center">
 		<div class='profile'>
 			<ul>
-				<li><img alt="pro" src="images/profile.png"></li>
+				<li>
+				<%-- <div contentEditable="true">
+ 				 <img  src="images/profile.png" /> 
+  					${dto.name}
+						</div>
+						</li> --%>
+				 <img alt="pro" src="images/profile.png"></li>
 				<li><label for="ex_filename">사진변경하기</label> <input type="file"
 					id="ex_filename" class="upload-hidden"></li>
 			</ul>
