@@ -5,9 +5,10 @@
 
 <mapper namespace="member">
 
-	<select id="mypage" parameterType="int" resultType="dto.MemberDTO">
-		select * from final_mem where num=#{num}
+	<select id="profile" parameterType="String" resultType="dto.MemberDTO">
+		select * from final_mem where email=#{email}
 	</select>
+	
 </mapper>   
 
 

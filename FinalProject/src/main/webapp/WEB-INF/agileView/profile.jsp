@@ -14,13 +14,14 @@
 
 
 	<div id="all">
-
+	
 		<div id="horizontal-menu">
                   <ul class="navbar">
                       <li id="home"><a href="#" id="home"><img id="home" src="images/home.png"
                       width="45" height="30"/></a></li>
                       <li id="logo1" >Love Your Project</li>
-                      <li ><a href="#" id="profile">PROFILE</a></li>
+                      <li ><a href="#" id="profile">PROFILE</a>
+                      </li>
                   </ul>
 
               </div>
@@ -62,7 +63,7 @@
 				</p>
 				<p>
 					<input type="text" name="name" id="name" placeholder="이름"
-						data-required="true" maxlength="45" aria-invalid="false"
+						data-required="true" maxlength="45" aria-invalid="false" value="${dto.name}"
 						style="width: 255px; height: 20px;" />
 				</p>
 
@@ -71,7 +72,7 @@
 				</p>
 				<p>
 					<input type="text" name="email" id="checkemail" placeholder="이메일"
-						placeholder="이름" data-required="true" maxlength="45"
+						placeholder="이름" data-required="true" maxlength="45" value="${dto.email}" readOnly
 						aria-invalid="false" style="width: 255px; height: 20px;">
 				</p>
 
@@ -79,8 +80,8 @@
 					<label for="introduce">INTRODUCE</label>
 				</p>
 				<p>
-					<textarea rows="15" cols="34" data-required="true"
-						aria-invalid="false" style="margin-top: 0px; margin-bottom: 0px;"></textarea>
+					<textarea rows="15" cols="34" data-required="true" 
+						aria-invalid="false" style="margin-top: 0px; margin-bottom: 0px;">${dto.introduce}</textarea>
 				</p>
 
 				<input id="save" type="submit" value="SAVE" /> <input id="cancle"

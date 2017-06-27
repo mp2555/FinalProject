@@ -171,14 +171,17 @@ CREATE TABLE card_comment
 CREATE TABLE final_mem
 (
 	mem_num number NOT NULL,
+	name varchar2(30) NOT NULL,
 	email varchar2(50) NOT NULL UNIQUE,
 	pass varchar2(50) NOT NULL,
 	introduce varchar2(350),
 	picture varchar2(40),
 	PRIMARY KEY (mem_num)
 );
+insert into final_mem values(SEQ_final_mem_mem_num.nextval,'주수경','wntnrud00@hanmail.net','1234','소개','')
+insert into final_mem values(SEQ_final_mem_mem_num.nextval,'안정환','dks3344@naver.com','1234','소개','')
 select * from final_mem
-
+select * from final_mem where email='wntnrud00@hanmail.net'
 CREATE TABLE team
 (
 	team_num number NOT NULL,

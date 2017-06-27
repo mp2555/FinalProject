@@ -1,5 +1,8 @@
 package service;
 
-public interface MemberService {
+import dto.MemberDTO;
 
+public interface MemberService {
+	public MemberDTO profileProcess(String email);
+	
 }

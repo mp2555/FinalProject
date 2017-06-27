@@ -1,6 +1,8 @@
 package dao;
 
-public interface MemberDAO {
+import dto.MemberDTO;
 
+public interface MemberDAO {
+	public MemberDTO profile(String email);
 	
 }

@@ -1,6 +1,7 @@
 package service;
 
 import dao.MemberDAO;
+import dto.MemberDTO;
 
 public class MemberServiceImp implements MemberService{
 
@@ -12,6 +13,11 @@ public class MemberServiceImp implements MemberService{
 	
 	public MemberServiceImp() {
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public MemberDTO profileProcess(String email) {
+		return dao.profile(email);
 	}
 	
 }//end class
