@@ -99,7 +99,7 @@ insert into kanban(kanban_num,kanban_order,kanban_name,pro_num)
 values(SEQ_kanban_kanban_num.nextval,1,'Ready',1)
 
 
-select p.pro_title from project p,kanban k,card c,card_mem cm
+select p.pro_title,k.kanban_name from project p,kanban k,card c,card_mem cm
 where p.pro_num=k.pro_num and k.kanban_num=c.kanban_num and c.card_num=cm.card_num
 
 
