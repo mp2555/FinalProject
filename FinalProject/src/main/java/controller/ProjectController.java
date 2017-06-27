@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.UUID;
+
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import dto.ProjectDTO;
 import service.ProjectService;
+
 
 @Controller
 public class ProjectController {
@@ -60,7 +61,6 @@ public class ProjectController {
 		if (!file.isEmpty()) {
 			String fileName = file.getOriginalFilename();
 
-			
 			String root = request.getSession().getServletContext().getRealPath("/");
 
 			String saveDirectory = root + "files" + File.separator;
@@ -83,7 +83,7 @@ public class ProjectController {
 			dto.setPro_pic(fileName);
 		}
 
-		service.saveProcess(dto);
+		(service).saveProcess(dto);
 		System.out.println(dto.getPro_title());
 		System.out.println(dto.getPro_des());
 		System.out.println(dto.getPro_pic());
@@ -103,5 +103,4 @@ public class ProjectController {
 		mav.setViewName("timeline");
 		return mav;
 	}
-
 }// end class

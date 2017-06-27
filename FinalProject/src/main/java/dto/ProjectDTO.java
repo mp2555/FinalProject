@@ -41,4 +41,5 @@ public class ProjectDTO {
 		this.pro_pic = pro_pic;
 	}
 
+
 }//end class

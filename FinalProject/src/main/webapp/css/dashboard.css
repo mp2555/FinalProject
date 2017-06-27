@@ -3,8 +3,9 @@
    position: relative;
    width: 1500px;
    height:100%;
-   margin-left: 350px;
+   margin-left:350px;
 }
+
 
  
 
@@ -43,11 +44,12 @@ border-left: none;
 
  .navbar a {
 text-decoration: none;
-   width: 50px;
+   width: 300px;
    display: block;
    font-size: 18px;
    font-family: "Trebuchet MS", Dotum;
    color: #8d8d8d;
+   
 }
 
 
@@ -74,7 +76,6 @@ border:2px solid #ececec;
 display:block;   /* 마우스 커서 올리면 서브메뉴 보이게 하기 */
 }
  
-
  #horizontal-menu .profile a{
 display:block;
  line-height:40px;
@@ -100,6 +101,7 @@ color:white;
 text-decoration: none;
 }
  
+
 #topMenu {
    width:100%;
   top:55px;
@@ -143,6 +145,7 @@ text-decoration: none;
    
 }
 
+
 .main-Kanban1{
 	position:absolute;
 	width:100%;
@@ -150,9 +153,6 @@ text-decoration: none;
 	left:100px;
 	
 }
-
-
-
 
 /* center */
 

@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<link rel="stylesheet" type="text/css" href="css/information.css" />
+<link rel="stylesheet" type="text/css" href="css/profile.css" />
 <link rel="stylesheet" href="/v-1495533137927/styles/theme-taiga.css">
 
 </head>
