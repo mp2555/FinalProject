@@ -17,27 +17,6 @@
 
 </head>
 <script type="text/javascript">
-	$(document)
-			.ready(
-					function() {
-						var delclick = $('.divi .kanban-del');
-						var adddiv = "<div class='divi' id='divi1'> <input type='button' class='kanban-del' value='삭제' /><p>New</p><div class='option'><a id='button-add-div1' href='#'>등록</a> <a href='#'>수정</a> <a href='#'>삭제</a></div> <div id='table-inner1' class='inner'></div> </div>";
-
-						$('.kanban-reg').on('click', function() {
-							//alert('teset');
-							$("#outline").prepend(adddiv);
-						})
-
-						$('body').on('click', '.kanban-del', function() {
-							//alert('222');
-							$(this).parent().remove();
-						});
-
-					});
-
-	
-	
-	
 	function drag(target, e) { //드래그 시작시 호출 함수
 		e.dataTransfer.setData('Text', target.id);
 	};
@@ -47,12 +26,161 @@
 		target.append(document.getElementById(id));
 		e.preventDefault();
 	};
+	
+	
+	var IdCount=0;
+ 	function add_item(){
+		//alert(IdCount);
+		var div = document.createElement('div');
+		
+		div.id="small-table"+IdCount++;
+		alert(div.id);
+		div.setAttribute("draggable","true");
+		div.setAttribute("ondragstart","drag(this, event)");
+		//div.class="small-table";
+		div.style.width="200px";
+		div.style.height="100px";
+		div.style.border="1px solid #d8d8d8";
+		div.style.backgroundColor="blue";
+		div.style.left="0px";
+		div.style.top="0px";
+		//div.style.float="left";
+		div.style.margin="10px";
+		div.style.borderradius="5px";
+		div.style.cursor="move";
+		
+		//var attach = document.getElementById("pre_set").innerHTML;
+			
+		var i=$(this);
+		switch(i){
+		case 1:document.getElementById("kanban"+i).appendChild(div);
+		break;
+		case 2:document.getElementById("kanban"+i).appendChild(div);
+		break;
+		case 3:document.getElementById("kanban"+i).appendChild(div);
+		break;
+		case 4:document.getElementById("kanban"+i).appendChild(div);
+		case 5:document.getElementById("kanban"+i).appendChild(div);
+		case 6:document.getElementById("kanban"+i).appendChild(div);
+		case 7:document.getElementById("kanban"+i).appendChild(div);
+		case 8:document.getElementById("kanban"+i).appendChild(div);
+		i++;
+		}
+			
+		 for(var i=1; i<20; i++){  
+			document.getElementById("kanban"+i).appendChild(div);//동적으로 칸반 생성하면 그안에다가 작은칸반 추가하는거 모르겟음 
+		 
+		 }
+		
+	
+	
+	}//end add_item()
+	
+	
+/* 	
+	<div id="table-inner1" class="inner" ondragover="return false;"
+		ondragenter="return false;" ondrop="drop(this, event);">
+	 */
+	var kanban_cnt=1;
+	function reg_kanban(){
+		
+		//var BigDiv =document.createElement('div');
+		var KanbanDiv = document.createElement('div');
+		var option = document.createElement('div');
+		var del = document.createElement('input');
+		var plus = document.createElement('input');
+		
+		option.style.width="60px";
+		option.style.height="40px";
+		option.style.border="1px solid white";
+		option.style.backgroundColor="yellow";
+		option.setAttribute("float","left");
+		
+		del.id="kanban-del";
+		del.setAttribute("type","button");
+		del.setAttribute("value","삭제");
+		del.style.width="50px";
+		del.style.height="20px";
+		
+		plus.id="kanban-plus";
+		plus.setAttribute("type","button");
+		plus.setAttribute("value","+");
+		plus.style.width="50px";
+		plus.style.height="20px";
+		plus.setAttribute("onclick","add_item()");
+		
+		
+		option.appendChild(del);
+		option.appendChild(plus);
+		
+	
+		
+		KanbanDiv.id="kanban"+kanban_cnt++;
+		alert(KanbanDiv.id);
+		KanbanDiv.setAttribute("ondragover","return false");
+		//KanbanDiv.setAttribute("ondragstart","drag(this, event)");
+		//KanbanDiv.class="small-table";
+		KanbanDiv.setAttribute("ondragenter","return false");
+		KanbanDiv.setAttribute("ondrop","drop(this, event)");
+		
+		KanbanDiv.style.width="265px";
+		KanbanDiv.style.height="400px";
+		//KanbanDiv.style.display="block";
+		//KanbanDiv.style.border="1px solid #d8d8d8";
+		KanbanDiv.style.backgroundColor="white";
+		KanbanDiv.style.overflow="auto";
+		KanbanDiv.style.padding="0px";
+		//KanbanDiv.style.float="left;";
+		KanbanDiv.style.margin="5px";
+		KanbanDiv.style.borderradius="10px";
+		
+		KanbanDiv.appendChild(option);
+		
+		
+	
+		document.getElementById("outline").appendChild(KanbanDiv);//동적으로 칸반 생성하면 그안에다가 작은칸반 추가하는거 모르겟음 
+		
+		
+		
+	}//end reg_kanban()
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	$(document).ready(function() {	
+						var kanbanCnt=0;
+						var delclick = $('.divi .option #kanban-del');
+						var adddiv = "<div class=divi id=divi1><p>New</p><div class=option><button id=kanban-del>del</button><button id=kanban-plus onclick=add_item()>+</button></div><div id=table-inner1 class=inner ondragover=return false; ondragenter=return false; ondrop=drop(this, event);>";
+						var smalldiv = "<div class=small-table draggable=true id=small1 ondragstart=drag(this, event)> <div> <p>할당된 사람 : 안정환</p><h2 id=kanban-name> <a href=#>제목 : A</a></h2></div></div>"
+						
+						//$('#kanban-reg').on('click', function() {//칸반 등록
+							
+							//$("#outline").append(adddiv);
+							
+						//});
+
+						$('body').on('click', '#kanban-del', function() {//칸반 삭제
+							//$(this).parents(".divi").remove();
+							$(this).parent().parent().remove();
+						});
+						 
+						$('body').on('click', '#kanban-plus', function() {//칸반 삭제
+							//$(this).parents(".divi").remove();
+							$(this).parent().parent().append();
+						});
+						
+					});
 </script>
 <body>
 	<div id="all">
 
 		<jsp:include page="header.jsp"></jsp:include>
-
 
 		<div class="main-Kanban1">
 			<div class="main-Kanban2">
@@ -74,36 +202,28 @@
 			</div>
 		</form>
 
-
 		<div class="Kanban-table">
+		<div class="divi">
+						<button id="kanban-reg" onclick="reg_kanban()">등록</button>
+					</div>
 			<div class="Kanban-table-header">
+			
 				<div id="outline">
-					<div class="divi" id="divi1">
+				
+				<!-- 	<div class="divi" id="divi1">
 						<p>New</p>
 						<div class="option">
-							<a id="button-add-div1" href="detail.lg">등록</a> <a href="#">수정</a>
-							<a href="#">삭제</a>
+							<button id="kanban-del">del</button>
+							<button id="kanban-plus">+</button> onclick="add_item()"
 						</div>
 
 
 						<div id="table-inner1" class="inner" ondragover="return false;"
 							ondragenter="return false;" ondrop="drop(this, event);">
 
+ -->
 
-							<div class="small-table" draggable="true" id="small1"
-								ondragstart="drag(this, event)">
-								<div>
-									<p>할당된 사람 : 안정환</p>
-									<h2 id="kanban-name">
-										<a href="#">제목 : A</a>
-									</h2>
-								</div>
-							</div>
-
-							<!-- small-tabel end -->
-
-
-							<div class="small-table" draggable="true" id="small2"
+							<!-- <div class="small-table" draggable="true" id="small2"
 								ondragstart="drag(this, event)">
 								<div>
 									<p>할당된 사람 : 서지환</p>
@@ -111,7 +231,7 @@
 										<a href="#">제목 : B</a>
 									</h2>
 								</div>
-							</div>
+							</div> -->
 
 							<!-- small-tabel end -->
 
@@ -119,18 +239,18 @@
 						<!-- table-inner1 end -->
 
 					</div>
+					
 
-
-					<div class="divi" id="divi2">
+						<!-- <div class="divi" id="divi2">
 						<p>Ready</p>
 						<div class="option">
 							<a id="button-add-div2" href="kanbanNewMake.do">등록</a> <a
 								href="#">수정</a> <a href="#">삭제</a>
 						</div>
-						<!-- option end -->
+						option end
 
 
-						<!-- 내부 칸반 div -->
+						내부 칸반 div
 						<div id="table-inner2" class="inner" ondragover="return false;"
 							ondragenter="return false;" ondrop="drop(this, event);">
 
@@ -143,7 +263,7 @@
 									</h2>
 								</div>
 							</div>
-							<!-- small-tabel end -->
+							small-tabel end
 
 
 							<div class="small-table" draggable="true" id="small4"
@@ -155,13 +275,13 @@
 									</h2>
 								</div>
 							</div>
-							<!-- small-tabel end -->
+							small-tabel end
 						</div>
-						<!-- table-inner2 end -->
+						table-inner2 end
 
 
 					</div>
-					<!-- divi end -->
+					divi end
 
 
 
@@ -182,52 +302,38 @@
 									</h2>
 								</div>
 							</div>
-							<!-- small-tabel end -->
+							small-tabel end
 						</div>
-					</div>
-
-					<div class="divi" id="divi4">
-						<p>Complete</p>
-						<div class="option">
-							<a id="button-add-div4" href="#">등록</a> <a href="#">수정</a> <a
-								href="#">삭제</a>
-						</div>
-						<div id="table-inner4" class="inner"></div>
-					</div>
-
-
-					<div class="divi" id="divi5">
-						<p>test ready</p>
-						<div class="option">
-							<a id="button-add-div5" href="#">등록</a> <a href="#">수정</a> <a
-								href="#">삭제</a>
-						</div>
-						<div id="table-inner5" class="inner"></div>
-					</div>
-
-
-					<div class="divi" id="divi6">
-						<p>test ready</p>
-						<div class="option">
-							<a id="button-add-div5" href="#">등록</a> <a href="#">수정</a> <a
-								href="#">삭제</a>
-						</div>
-						<div id="table-inner6" class="inner"></div>
-					</div>
+					</div> -->
 
 
 
 				</div>
 				<!-- outline end -->
-
-			</div>
+	
 			<!-- Kanban-table-header end  -->
 
 		</div>
 		<!-- Kanban-table end  -->
+	
 
+			</div>
 
 	</div>
 	<!-- all end -->
+	
+	<!-- ///////////////////////////////////////////////////////////////////////////////// -->
+						<div id="pre_set" style="display:none">
+							<div class="small-table" draggable="true" id="small1"
+								ondragstart="drag(this, event)">
+							<!-- 	<div>
+									<p>할당된 사람 : 안정환</p>
+									<h2 id="kanban-name">
+										<a href="#">제목 : A</a>
+									</h2>
+								</div> -->
+							</div>
+						</div><!-- id pre_set end -->
+	
 </body>
 </html>
