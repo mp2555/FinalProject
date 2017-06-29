@@ -6,6 +6,15 @@ public class ProjectDTO {
 
 	private int pro_num;
 	private String pro_title, pro_des, pro_pic;
+	private int pic_change;
+	
+	
+	public int getPic_change() {
+		return pic_change;
+	}
+	public void setPic_change(int pic_change) {
+		this.pic_change = pic_change;
+	}
 	
 	//첨부파일(프로젝트 이미지)
 	private MultipartFile filename;

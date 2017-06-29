@@ -48,7 +48,7 @@
 				<li><a href="#" id="TIME LINE">TIME LINE</a></li>
 				<li style="color: #2d2d2d">김동호 바보바보바보바보바보바보김동호 바보바보바보김동호 바보바보
 					바보김동호 바보 ...</li>
-				<li><a href="#" id="PROJECT INFORMATION">PROJECT
+				<li><a href="project_info.do" id="PROJECT INFORMATION">PROJECT
 						INFORMATION</a></li>
 			</ul>
 		</div>

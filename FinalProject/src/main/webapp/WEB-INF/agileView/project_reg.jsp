@@ -43,20 +43,32 @@
 					if (input.files && input.files[0]) {
 						var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
 						reader.onload = function(e) {
+
 							//파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
 							$('.image').attr('src', e.target.result);
 							//이미지 Tag의 SRC속성에 읽어들인 File내용을 지정
 							//(아래 코드에서 읽어들인 dataURL형식)
+
 						}
+
 						reader.readAsDataURL(input.files[0]);
 						//File내용을 읽어 dataURL형식의 문자열로 저장
+
 					}
 				}//readURL()--
 
 				//file 양식으로 이미지를 선택(값이 변경) 되었을때 처리하는 코드
 				$("#ex_file").change(function() {
 					//alert('tetst:'+this.value); //선택한 이미지 경로 표시
+
+					$('#chg').text('1');
 					readURL(this);
+				});
+
+				$("#basic-logo").on("click", function() {
+					//alert('test');
+					$('.image').attr('src', 'images/logo.png');
+					$('#chg').text('0');
 				});
 
 				$('#descripction').keyup(function(e) {
@@ -79,23 +91,23 @@
 								$('[name=pro_title]').val(
 										$('[name=pro_title]').val().replace(
 												/\n/gi, '<br/>'));
+
 								$('#frm').attr('action', 'project_reg.do')
 										.submit();
 								return false;
 							}
 						});
 
-				$(".cancle").on('click',function(){
-					alert('test');
-					$('#frm2').attr('action', 'dashboard.do')
-					.submit();
+				$(".cancle").on('click', function() {
+					//alert('test');
+					$('#frm2').attr('action', 'dashboard.do').submit();
 					return false;
 				});
 			});
 </script>
 </head>
 <body>
-	<form name="frm2" id="frm2" method="get" ></form>
+	<form name="frm2" id="frm2" method="get"></form>
 	<form name="frm" id="frm" method="post" enctype="multipart/form-data">
 		<div id="all">
 			<jsp:include page="header.jsp"></jsp:include>
@@ -113,12 +125,18 @@
 				<div id="logo">
 					<p>
 						<img alt="logo" class="image" src="images/logo.png"
-							style="background: rgb(213, 156, 156);">
+							style="background: rgb(213, 156, 156);" width="200px"
+							height="200px">
 					</p>
 
 					<div class="filebox">
-						<label for="ex_file">로고 변경하기</label> <input type="file"
-							name="filename" id="ex_file">
+						<div>
+							<label for="ex_file">로고 변경하기</label> <input type="file"
+								name="filename" id="ex_file">
+						</div>
+						<div>
+							<label id="basic-logo">기본 로고</label>
+						</div>
 					</div>
 				</div>
 
@@ -147,6 +165,10 @@
 				&nbsp;&nbsp;&nbsp;
 				<button title="프로젝트 삭제하기" class="cancle">취소</button>
 			</div>
+		</div>
+
+		<div id="pic_change">
+			<textarea id="chg" name="pic_change" readonly="readonly">0</textarea>
 		</div>
 	</form>
 </body>
