@@ -59,7 +59,7 @@ display: inline-block;
 }
 
 .filebox label { 
-position:absolute;
+position:inherit;
 width:150px;
 top:220px;
 display: inline-block;
@@ -76,7 +76,7 @@ display: inline-block;
      } 
     
     .filebox input[type="file"] {
-     /* íŒŒì¼ í•„ë“œ ìˆ¨ê¸°ê¸° */ 
+          /* ÆÄÀÏ ÇÊµå ¼û±â±â */ 
      position: absolute; 
      width: 1px; 
      height: 1px; 

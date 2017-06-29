@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,19 +38,17 @@
 <script type="text/javascript">
 	$(document).ready(
 			function() {
-
-				$('#pname').val('${dto.pro_title}');
-				$('#descripction').val('${dto.pro_des}');
-
 				function readURL(input) {
 					//alert('test');
 					if (input.files && input.files[0]) {
 						var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
 						reader.onload = function(e) {
+
 							//파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
 							$('.image').attr('src', e.target.result);
 							//이미지 Tag의 SRC속성에 읽어들인 File내용을 지정
 							//(아래 코드에서 읽어들인 dataURL형식)
+
 						}
 
 						reader.readAsDataURL(input.files[0]);
@@ -63,6 +60,7 @@
 				//file 양식으로 이미지를 선택(값이 변경) 되었을때 처리하는 코드
 				$("#ex_file").change(function() {
 					//alert('tetst:'+this.value); //선택한 이미지 경로 표시
+
 					$('#chg').text('1');
 					readURL(this);
 				});
@@ -81,7 +79,7 @@
 
 				var des = $('#descripction').val();
 
-				$("#save").on(
+				$("#reg").on(
 						'click',
 						function() {
 							if ($('#pname').val() == '') {
@@ -93,70 +91,54 @@
 								$('[name=pro_title]').val(
 										$('[name=pro_title]').val().replace(
 												/\n/gi, '<br/>'));
-								$('#frm').attr('action', 'project_upt.do')
+
+								$('#frm').attr('action', 'project_reg.do')
 										.submit();
+								return false;
 							}
 						});
 
-				$(".delete").on("click", function() {
-					alert('test');
-					var confirmflag = confirm("프로젝트를 삭제하시겠습니까?");
-					if (confirmflag) {
-						$('#frm').attr('action', 'project_del.do').submit();
-						return false;
-					} else {
-						return false;
-					}
-
+				$(".cancle").on('click', function() {
+					//alert('test');
+					$('#frm2').attr('action', 'dashboard.do').submit();
+					return false;
 				});
-
 			});
 </script>
 </head>
 <body>
+	<form name="frm2" id="frm2" method="get"></form>
 	<form name="frm" id="frm" method="post" enctype="multipart/form-data">
 		<div id="all">
 			<jsp:include page="header.jsp"></jsp:include>
 
+
 			<div class="main-Kanban1">
 				<h1>
 					<span class="project-name">KH 파이널</span> <span
-						class="project-detail">프로젝트 수정</span>
+						class="project-detail">프로젝트 등록</span>
 				</h1>
 			</div>
-
 
 			<div id="form">
 
 				<div id="logo">
 					<p>
-						<c:if test="${!empty dto.pro_pic}">
-							<img alt="logo" class="image" src="files/${dto.pro_pic}"
-								style="background: rgb(213, 156, 156);" width="200px"
-								height="200px">
-								<!-- <img alt="logo" class="image" src="images/logo.png"
-								style="background: rgb(213, 156, 156);" width="200px"
-								height="200px"> -->
-						</c:if>
-						<c:if test="${empty dto.pro_pic }">
-							<img alt="logo" class="image" src="images/logo.png"
-								style="background: rgb(213, 156, 156);" width="200px"
-								height="200px">
-						</c:if>
-
-
-
+						<img alt="logo" class="image" src="images/logo.png"
+							style="background: rgb(213, 156, 156);" width="200px"
+							height="200px">
 					</p>
 
 					<div class="filebox">
-						<label for="ex_file">로고 변경하기</label> <input type="file"
-							name="filename" id="ex_file">
+						<div>
+							<label for="ex_file">로고 변경하기</label> <input type="file"
+								name="filename" id="ex_file">
+						</div>
 						<div>
 							<label id="basic-logo">기본 로고</label>
 						</div>
 					</div>
 				</div>
-
 
 				<div id="aaa">
 					<label>PROJECT NAME</label>
@@ -179,11 +161,12 @@
 				</div>
 
 				&nbsp;
-				<button id='save' type="button" title="저장">저장</button>
+				<button id='reg' type="button" title="등록">등록</button>
 				&nbsp;&nbsp;&nbsp;
-				<button title="프로젝트 삭제하기" class="delete">프로젝트 삭제하기</button>
+				<button title="프로젝트 삭제하기" class="cancle">취소</button>
 			</div>
 		</div>
+
 		<div id="pic_change">
 			<textarea id="chg" name="pic_change" readonly="readonly">0</textarea>
 		</div>
